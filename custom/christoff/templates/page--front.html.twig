@@ -1,0 +1,60 @@
+<div class="container">
+<!-- Header -->
+  <div class="row">
+    <div class="col-6">
+      {% if page.header %}
+        <div class="header">
+          {{ page.header }}
+        </div>
+      {% endif %}
+    </div>
+    <div class="col-6">
+      {% if page.main_navigation %}
+        <div class="main-navigation">
+          {{page.main_navigation}}
+        </div>
+      {% endif %}
+      </div>
+    </div>
+
+  <!-- Subheader left and subheader right -->
+  <div class="row">
+    <div class="col-6">
+      {{ page.subheader_left }}
+    </div>
+    <div class="col-6">
+     {{ page.subheader_right }}
+    </div>
+  </div>
+  
+    
+
+  <!-- Content and sidebar -->
+  <main role="main">
+    <div class="row">
+      <div class="col-8">
+        <div class="layout-content">
+          {{ page.content }}
+        </div>{# /.layout-content #}
+      </div>
+      <div class="col-4">
+        {% if page.sidebar %}
+          <aside class="layout-sidebar-first" role="complementary">
+            {{ page.sidebar }}
+          </aside>
+        {% endif %}
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <div class="row">
+    <div class="col-12">
+    {% if page.footer %}
+      <footer class="footer" role="contentinfo">
+        {{ page.footer }}
+      </footer>
+    {% endif %}
+    </div>
+  </div>
+
+</div>{# /.layout-container #}
